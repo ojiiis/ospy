@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <title>Ospy</title>
+    <style>
+        body{
+            margin: 0;
+            box-sizing: border-box;
+            background: #2F4F4F;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #app{
+            width: 100%;
+            height: auto;
+        }
+        .btn{
+            border:none;
+            outline: 0;
+            padding:10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn.long{
+            border:none;
+            outline: 0;
+            padding:10px 60px;
+           
+        }
+        .btn.big{
+            border:none;
+            outline: 0;
+            padding:25px 60px;
+             font-size: 25px;
+        }
+        .btn.light{
+            background:#f7f7f7;
+            color:#0A0A0A;
+        }
+         .btn.light:hover{
+            background:#0A0A0A;
+            color:#f7f7f7;
+        }
+        .btn.dark{
+            background:#dc143c;
+            color:#f7f7f7;
+        }
+        .btn.dark:hover{
+            background:#f7f7f7;
+            color:#dc143c;
+        }
+        #header{
+            background:#0A0A0A ;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            left:0;
+            top:0;
+            z-index: 100;
+        }
+       
+        #header #logo{
+            width: 100px;
+            margin-left: 50px; 
+        }
+        #header #logo img{
+            width: 100%;
+        }
+         #header nav ul{
+           display: flex;
+        }
+         #header nav ul li{
+           list-style-type: none;
+           
+        }
+         #header nav ul li a{
+          text-decoration: none;
+          margin-right: 30px; 
+          color:#f7f7f7;
+          font-size: 20px;
+        }
+         #header nav ul li a:hover{
+ color:#dc143c;
+        }
+        #header nav ul li a:last-child{
+           margin-right: 50px; 
+        }
+         #header nav ul li a.active{
+         color:#dc143c;
+        }
+         #header-filler{
+             width: 100%;
+             height: 70px;
+        }
+        #banner{
+            /* width: 100%;
+            height: 300px; */
+            padding: 50px;
+            height: 500px;
+            /* background: #dc143c; */
+            background: #007BFF;
+            background-image:url('assets/images/banner1.png') ;
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            color:#f7f7f7;
+            position: relative;
+            z-index: 1;
+        }
+        /* #banner #mask{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background: url('assets/images/mask.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            left:55%;
+            top:30%;
+            z-index: -1;
+        } */
+        #banner h1{
+            font-size: 60px;
+        }
+         #banner span{
+            display: block;
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+        @keyframes btf {
+            from{
+              transform: scaleY(1);
+            }
+              to{
+              transform: scaleY(-1);
+            }
+        }
+        .section-inner{
+            padding:0 100px;
+            height: auto;
+        }
+         .section-heading{
+           padding:25px;
+           text-align: center;
+        }
+          .section-heading h2{
+           font-size: 45px;
+           color:#dc143c;
+        }
+         .section-heading p{
+           font-size: 30px;
+           color:#f7f7f7;
+        }
+        /* #DC143C for links, button and more
+        ##2F4F4F for background */
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="header">
+            <div id="logo"><img src="assets/images/logo.png"></div>
+            <nav>
+                <ul>
+                    <li><a class="active" href="javascript:void(0)">Home</a></li>
+                    <li><a href="javascript:void(0)">Andriod Spy</a></li>
+                    <li><a href="javascript:void(0)">Iphone Spy</a></li>
+                    <li><a href="javascript:void(0)">Desktop Spy</a></li>
+                    <li><a href="javascript:void(0)">FAQ</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="header-filler"></div>
+        <section id="banner">
+          <h1>Ospy: <br>The Ultimate Solution for <br>Discreet and Reliable Monitoring</h1>
+          <span id="btfd">Track, Protect, and Stay Informed – All Without a Click!</span>
+          <button class="btn big dark">Explore Ospy Features</button>
+          <!-- <div id="mask"></div> -->
+        </section>
+        <section>
+         <div class="section-inner">
+             <div class="section-heading">
+                <h2 style="color:#007BFF">Powerful Monitoring Tools for Every Need</h2>
+                <p>Ospy delivers cutting-edge solutions to ensure you stay connected, informed, and in control.</p>
+            </div>
+            <style>
+                #service-lister{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                .services{
+                    flex-shrink: 0;
+                    width: 32%;
+                    background: #f7f7f7;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin-bottom: 2%;
+                }
+                .service-image{
+                    width: 100%;
+                    height: 300px;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                .service-image:nth-child(1){
+                    background-image: url('assets/images/android.jpg');
+                }
+                .service-content{
+                  padding:20px;
+                }
+                .service-content h3{
+                    color:#007BFF;
+                }
+                .service-content button{
+                  text-align: right;
+                }
+            </style>
+             <div class="section-content">
+                    <div id="service-lister">
+                        <!--service single item-->
+                        <div class="services">
+                              <div class="service-image"></div>
+                              <div class="service-content">
+                                   <h3>Android Spy App</h3>
+                                   <p>Monitor Android devices effortlessly with Ospy’s state-of-the-art features. Gain access to calls, messages, multimedia,
+                                and GPS locations – all without rooting the device.</p>
+                                <button class="btn long dark">Learn more</button>
+                              </div>
+                        </div>
+                        
+
+                        <!--service single item-->
+                        <div class="services">
+                            <div class="service-image"></div>
+                            <div class="service-content">
+                                <h3>Android Spy App</h3>
+                                <p>Monitor Android devices effortlessly with Ospy’s state-of-the-art features. Gain access to calls, messages,
+                                    multimedia,
+                                    and GPS locations – all without rooting the device.</p>
+                                <button class="btn long dark">Learn more</button>
+                            </div>
+                        </div>
+
+                        <!--service single item-->
+                        <div class="services">
+                            <div class="service-image"></div>
+                            <div class="service-content">
+                                <h3>Android Spy App</h3>
+                                <p>Monitor Android devices effortlessly with Ospy’s state-of-the-art features. Gain access to calls, messages,
+                                    multimedia,
+                                    and GPS locations – all without rooting the device.</p>
+                                <button class="btn long dark">Learn more</button>
+                            </div>
+                        </div>
+
+                        <!--service single item-->
+                        <div class="services">
+                            <div class="service-image"></div>
+                            <div class="service-content">
+                                <h3>Android Spy App</h3>
+                                <p>Monitor Android devices effortlessly with Ospy’s state-of-the-art features. Gain access to calls, messages,
+                                    multimedia,
+                                    and GPS locations – all without rooting the device.</p>
+                                <button class="btn long dark">Learn more</button>
+                            </div>
+                        </div>
+
+                        <!--service single item-->
+                        <div class="services">
+                            <div class="service-image"></div>
+                            <div class="service-content">
+                                <h3>Android Spy App</h3>
+                                <p>Monitor Android devices effortlessly with Ospy’s state-of-the-art features. Gain access to calls, messages,
+                                    multimedia,
+                                    and GPS locations – all without rooting the device.</p>
+                                <button class="btn long dark">Learn more</button>
+                            </div>
+                        </div>
+                        
+
+                        <!--service single item-->
+                        <div class="services">
+                            <div class="service-image"></div>
+                            <div class="service-content">
+                                <h3>Android Spy App</h3>
+                                <p>Monitor Android devices effortlessly with Ospy’s state-of-the-art features. Gain access to calls, messages,
+                                    multimedia,
+                                    and GPS locations – all without rooting the device.</p>
+                                <button class="btn long dark">Learn more</button>
+                            </div>
+                        </div>
+
+
+                        
+                    </div>
+             </div>
+         </div>
+        </section>
+        <section>
+            <div class="section-inner">
+                <div class="section-heading">
+                    <h2 style="color:#007BFF">Powerful Monitoring Tools for Every Need</h2>
+                    <p>Ospy delivers cutting-edge solutions to ensure you stay connected, informed, and in control.</p>
+                </div>
+                <div class="section-content">
+        
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-inner">
+                <div class="section-heading">
+                    <h2 style="color:#007BFF">Powerful Monitoring Tools for Every Need</h2>
+                    <p>Ospy delivers cutting-edge solutions to ensure you stay connected, informed, and in control.</p>
+                </div>
+                <div class="section-content">
+                     
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-inner">
+                <div class="section-heading">
+                    <h2 style="color:#007BFF">Powerful Monitoring Tools for Every Need</h2>
+                    <p>Ospy delivers cutting-edge solutions to ensure you stay connected, informed, and in control.</p>
+                </div>
+                <div class="section-content">
+        
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+           var btf = [
+            'Zero Click, Zero Interaction – Complete monitoring without physical access to the target device.',
+            'Real-Time Insights – Track calls, messages, GPS location, and more instantly.',
+            'Stealth Mode – 100% hidden, leaving no trace behind.',
+            'Multi-Device Compatibility – Works seamlessly on Android, iOS, and PCs.',
+            'Track, Protect, and Stay Informed – All Without a Click!'
+           ];
+           var btfI = 0;
+           setInterval(function(){
+               btfI++;
+               if(btfI >= btf.length){
+                   btfI = 0;
+               }
+               document.getElementById("btfd").style.animation = `btf 0.5s forwards`;
+               setTimeout(()=>{
+                  document.getElementById("btfd").style.animation = `none`;
+                   document.getElementById("btfd").textContent = btf[btfI];
+               },100);
+               
+           },5000);
+    </script>
+</body>
+</html>
