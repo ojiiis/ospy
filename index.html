@@ -6,374 +6,7 @@
     <link rel="icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Ospy</title>
-    <style>
-        body{
-            margin: 0;
-            box-sizing: border-box;
-            background: #2F4F4F;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        
-        #app{
-            width: 100%;
-            height: auto;
-        }
-        .no-desktop{
-            display:none;
-        }
-         .no-mobile{
-            display: block;
-        }
-       .caltoaction{
-        padding: 50px;
-        margin: 50px 0;
-        text-align: center;
-       }
-        .btn{
-            border:none;
-            outline: 0;
-            padding:10px 25px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn.long{
-            border:none;
-            outline: 0;
-            padding:10px 60px;
-           
-        }
-        .btn.big{
-            border:none;
-            outline: 0;
-            padding:25px 60px;
-             font-size: 25px;
-        }
-        .btn.light{
-            background:#f7f7f7;
-            color:#0A0A0A;
-        }
-         .btn.light:hover{
-            background:#0A0A0A;
-            color:#f7f7f7;
-        }
-        .btn.dark{
-            background:#dc143c;
-            color:#f7f7f7;
-        }
-        .btn.dark:hover{
-            background:#f7f7f7;
-            color:#dc143c;
-        }
-        #header{
-            background:#0A0A0A ;
-            width: 100%;
-            height: 70px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            left:0;
-            top:0;
-            z-index: 100;
-        }
-       
-        #header #logo{
-            width: 100px;
-            margin-left: 50px; 
-        }
-        #header #logo img{
-            width: 100%;
-        }
-         #header nav ul{
-           display: flex;
-        }
-         #header nav ul li{
-           list-style-type: none;
-           
-        }
-         #header nav ul li a{
-          text-decoration: none;
-          margin-right: 30px; 
-          color:#f7f7f7;
-          font-size: 20px;
-        }
-         #header nav ul li a:hover{
- color:#dc143c;
-        }
-        #header nav ul li a:last-child{
-           margin-right: 50px; 
-        }
-         #header nav ul li a.active{
-         color:#dc143c;
-        }
-         #mobile-menu-btn{
-            margin-right: 50px;
-            font-size: 25px;
-            cursor: pointer;
-         }
-        #mobile-menu-btn i{
-            color:#f7f7f7;
-        }
-         #header-filler{
-             width: 100%;
-             height: 70px;
-        }
-        #banner{
-            /* width: 100%;
-            height: 300px; */
-            padding: 50px;
-            height: 500px;
-            /* background: #dc143c; */
-            background: #007BFF;
-            background-image:url('assets/images/banner1.png') ;
-            background-position:bottom right;
-            background-size: contain;
-            background-repeat: no-repeat;
-            color:#f7f7f7;
-            position: relative;
-            z-index: 1;
-        }
-        #banner::before{
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top:0;
-            left:0;
-            background: #0A0A0A;
-            opacity: 0.5;
-            z-index: -1;
-        }
-        /* #banner #mask{
-            width: 200px;
-            height: 200px;
-            position: absolute;
-            background: url('assets/images/mask.png');
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            left:55%;
-            top:30%;
-            z-index: -1;
-        } */
-        #banner h1{
-            font-size: 60px;
-        }
-         #banner span{
-            display: block;
-            font-size: 25px;
-            margin-bottom: 25px;
-        }
-        @keyframes btf {
-            from{
-              transform: scaleY(1);
-            }
-              to{
-              transform: scaleY(-1);
-            }
-        }
-        .light-board{
-            background: #f7f7f7;
-        }
-        .section-inner{
-            padding:40px 100px;
-            height: auto;
-        }
-         .section-heading{
-           padding:25px;
-           text-align: center;
-        }
-          .section-heading h2{
-           font-size: 45px;
-           color:#dc143c;
-        }
-         .section-heading p{
-           font-size: 30px;
-           color:#f7f7f7;
-        }
-            #service-lister{
-                    width: 100%;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                }
-                .services{
-                    flex-shrink: 0;
-                    width: 32%;
-                    background: #f7f7f7;
-                    border-radius: 10px;
-                    overflow: hidden;
-                    margin-bottom: 2%;
-                    position: relative;
-                    z-index: 3;
-                    box-shadow:2.5px -2.5px 5px #007BFF;
-                }
-       .services:hover{
-         box-shadow:5px -5px 10px #007BFF;
-       }
-                .service-image{
-                    width: 100%;
-                    height: 300px;
-                    background-size: cover;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                }
-      
-                .service-content{
-                  padding:20px;
-                }
-                .service-content h3{
-                    color:#007BFF;
-                }
-                .service-content button{
-                  text-align: right;
-                }
-                
-                      .content-slider{
-                        width: 100%;
-                        padding: 25px 0;
-                        display: flex;
-                        flex-wrap: wrap; 
-                         justify-content: space-between;
-                      
-                    }
-                    .content-slides{
-                        flex-shrink: 0;
-                        border-radius: 10px;
-                        border:5px solid #007BFF;
-                        padding:1%;
-                        /* display: inline-block; */
-                        width: 28%;
-                        background: lightblue;
-                        margin-top: 3%;
-                    }
-
-        /* #DC143C for links, button and more
-        ##2F4F4F for background */
-        @media screen and (max-width:1050px){
-                .no-desktop{
-            display:block;
-        }
-        .no-mobile{
-            display: none;
-        }
-        #menu-nav{
-            position: absolute;
-            top:69.5px;
-            left:0;
-            width: 100%;
-            background: #007BFF;
-        }
-         #menu-nav ul{
-        flex-direction: column;
-        }
-          #menu-nav ul li{
-            margin-bottom: 20px;
-        }
-        @keyframes showMenu {
-            from{
-              display:none;
-              top:-100%
-            }
-            to{
-              display:block;
-              top:70px;
-            }
-        }
-          @keyframes hideMenu {
-            from{
-              display:block;
-              top:70px;
-            }
-            to{
-              display:block;
-              top:-100%;
-            }
-        }
-           #banner{
-          height: 600px;
-        }
-                 .service-image{
-                
-                    height: 150px;
-                   
-                }
-       
-        }
-  @media screen and (max-width:930px){
-      .section-inner{
-            padding:30px;
-        }
-         .section-heading h2{
-           font-size: 35px;
-           color:#dc143c;
-        }
-         .section-heading p{
-           font-size: 20px;
-           color:#f7f7f7;
-        }
-  #service-lister{
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                }
-                .services{
-                    flex-shrink: 0;
-                    width: auto;
-                    margin-bottom: 20px;
-                }
-                 .service-image{
-                    height: 400px;
-                }
-  }
-         @media screen and (max-width:810px){
-       
-              .btn{
-          
-            padding:10px 15px;
-           
-        }
-        .btn.long{
-          
-            padding:10px 30px;
-           
-        }
-        .btn.big{
-            padding:15px 30px;
-             font-size: 15px;
-        }
-           #banner{
-          height: 400px;
-          padding: 20px;
-        }
-         #banner h1{
-            font-size: 30px;
-        }
-          #banner span{
-            font-size: 20px;
-        }
-                 .service-image{
-                
-                    height: 150px;
-                   
-                }
-
-                      .content-slider{
-                        width: 100%;
-                        padding: 25px 0;
-                        display: flex;
-                        flex-wrap: nowrap; 
-                        flex-direction: column;
-                         justify-content: center;
-                      
-                    }
-                    .content-slides{
-                        width: 100%;
-                        margin-top: 3%;
-                    }
-
-       
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="app">
@@ -381,8 +14,8 @@
             <div id="logo"><img src="assets/images/logo.png"></div>
             <nav class="no-mobile" id="menu-nav">
                 <ul>
-                    <li><a class="active" href="javascript:void(0)">Home</a></li>
-                    <li><a href="javascript:void(0)">Andriod Spy</a></li>
+                    <li><a class="active" href="./">Home</a></li>
+                    <li><a href="andriod-spy.html">Andriod Spy</a></li>
                     <li><a href="javascript:void(0)">Iphone Spy</a></li>
                     <li><a href="javascript:void(0)">Desktop Spy</a></li>
                     <li><a href="javascript:void(0)">FAQ</a></li>
@@ -487,7 +120,7 @@
             <div class="section-inner">
                 <div class="section-heading">
                     <h2 style="color:#007BFF">Why Choose Ospy?</h2>
-                    <p style="color:#0A0A0A">Ospy is designed to provide seamless monitoring while keeping your activities completely hidden and secure.</p>
+                    <p style="color:#2F4F4F">Ospy is designed to provide seamless monitoring while keeping your activities completely hidden and secure.</p>
                 </div>
                 <div class="section-content">
                        <div class="content-slider">
@@ -530,28 +163,126 @@
         <section style="background: #007BFF;">
             <div class="section-inner">
                 <div class="section-heading">
-                    <h2 style="color:#f7f7f7">Contact us</h2>
-                    <p>Let us vibe.</p>
+                    <h2 style="color:#f7f7f7">Start Monitoring in 3 Simple Steps</h2>
+                    <p>Set up Ospy quickly and effortlessly, no technical knowledge required!</p>
                 </div>
                 <div class="section-content">
-                     
+                     <div class="three-lister">
+                         <div class="three-lister-child">
+                             <div>1</div>
+                             <h3>Choose Your Plan</h3>
+                             <p>Select the Ospy package that fits your monitoring needs. We offer flexible plans for individuals, parents, and
+                            businesses.</p>
+                         </div>
+                         <div class="three-lister-child">
+                            <div>2</div>
+                            <h3>Activate & Connect</h3>
+                            <p>No installation required! Our zero-click technology connects to the target device remotely and starts syncing data
+                            instantly.</p>
+                         </div>
+                         <div class="three-lister-child">
+                            <div>3</div>
+                            <h3>Monitor & Stay Informed</h3>
+                            <p>Access your secure dashboard from any device and start tracking calls, messages, GPS location, and more in real time.</p>
+                         </div>
+                     </div>
+                    <div class="caltoaction">
+                        <h3 style="color:#f7f7f7">Start your spy journey now!</h3>
+                        <button class="btn big dark">Try Ospy Today</button>
+                    </div>
                 </div>
             </div>
         </section>
         <section>
             <div class="section-inner">
                 <div class="section-heading">
-                    <h2 style="color:#007BFF">Powerful Monitoring Tools for Every Need</h2>
-                    <p>Ospy delivers cutting-edge solutions to ensure you stay connected, informed, and in control.</p>
+                    <h2>Real Stories from Satisfied Users</h2>
+                    <p>See how Ospy has helped individuals and businesses stay informed and secure.</p>
+                </div>
+                <div id="testimony-lister">
+                    <div class="testimony-single">
+                        <div class="testimony-user" data="assets/images/t1.jpg"></div>
+                        <div class="testimony-content">
+                            <h3>"Ospy has given me peace of mind knowing that my kids are safe online. I can monitor their chats and location without
+                            them even noticing!"</h3>
+                            <p>John D. – Concerned Parent</p>
+                        </div>
+                    </div>
+                    <div class="testimony-single">
+                        <div class="testimony-user" data="assets/images/t2.jpg"></div>
+                        <div class="testimony-content">
+                            <h3>"With Ospy, I can track my employees’ company devices and prevent data leaks. The real-time monitoring is a game-changer
+                            for my business!"
+                            </h3>
+                            <p>Lisa M. – Business Owner</p>
+                        </div>
+                    </div>
+                    <div class="testimony-single">
+                        <div class="testimony-user" data="assets/images/t3.jpg"></div>
+                        <div class="testimony-content">
+                            <h3>"I’ve used many monitoring tools, but nothing comes close to Ospy’s stealth and reliability. The zero-click feature
+                            makes it completely undetectable."</h3>
+                            <p>Mark T. – Private Investigator</p>
+                        </div>
+                    </div>
+                    <div class="testimony-single">
+                        <div class="testimony-user" data="assets/images/t4.jpg"></div>
+                        <div class="testimony-content">
+                            <h3>"Ospy helped me confirm my suspicions in my relationship. The social media tracking feature was incredibly insightful!"</h3>
+                            <p>Sarah K. – Concerned Partner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="background: #f7f7f7;">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <h2 style="color:#007BFF">We’re Here to Help – 24/7 Customer Support</h2>
+                    <p style="color:#2F4F4F">Need assistance? Our dedicated support team is available round the clock to answer your questions and ensure a smooth
+                    experience with Ospy.</p>
                 </div>
                 <div class="section-content">
-        
+                       <div id="contact-us">
+                          <div id="contact-us-left-child">
+                             <h3>Contact Us</h3>
+                             <p>Have a question or need technical support? Reach out to us via:</p>
+                             <ul>
+                                <li><a href="javascript:void(0)">Live Chat: Available 24/7 for instant assistance.</a></li>
+                                <li><a href="javascript:void(0)">Email Support: support@ospy.com</a></li>
+                                <li><a href="javascript:void(0)">Phone: +1 (800) 123-4567</a></li>
+                                <li><a href="javascript:void(0)">WhatsApp Support: Chat with us directly at +1 (800) 123-4567</a></li>
+                             </ul>
+                             <button class="btn big dark">Live chat</button>
+                          </div>
+                          <div id="contact-us-right-child">
+                             <div>
+                                <h3>📍 Our Office Address</h3>
+                                <p>123 Tech Avenue, Suite 500
+                                Silicon Valley, CA, USA</p>
+                             </div>
+                            <div>
+                                <h3>🌍 Follow Us on Social Media</h3>
+                                <p>Stay updated with the latest features, offers, and news.</p>
+                                <ul>
+                                    <li><a href="javascript:void(0)">Facebook: @OspyOfficial</a></li>
+                                    <li><a href="javascript:void(0)">Twitter: @OspyApp</a></li>
+                                    <li><a href="javascript:void(0)">Instagram: @OspyApp</a></li>
+                                </ul>
+                            </div>
+                          </div>
+                       </div>
                 </div>
+            </div>
+        </section>
+        <section style=" background:#0A0A0A ;">
+            <div class="section-inner">
+                <h3 style="color:#dc143c;text-align: center;">Ospy – Smart Monitoring, Total Control.</h3>
             </div>
         </section>
     </div>
     <a href="https://api.whatsapp.com/send?phone=+2348030914844&text=I+need+Ospy+service.">
-        <div style="position:fixed;right:30px;bottom:30px;border-radius:50%;width:50px;height:50px;background-image: url('assets/images/whatsapp-btn.jpg');background-position: center;background-size: cover;"></div>
+        <div id="whatsapp-cta"></div>
     </a>
     <script>
     
@@ -578,28 +309,23 @@
            document.getElementById("mobile-menu-btn").onclick = function(){
               if(document.getElementById("menu-nav").style.display == "" || document.getElementById("menu-nav").style.display == "none"){
                   document.getElementById("menu-nav").style.display = "block";
-                // document.getElementById("menu-nav").style.animation = "none";
-                
-                
-                // setTimeout(()=>{
-                //     document.getElementById("menu-nav").style.animation = "showMenu 2s forwards";
-                // },50);
+        
                 
               }else{
                  document.getElementById("menu-nav").style.display = "none";
-                //  document.getElementById("menu-nav").style.animation = "none";
-                  
-                //   setTimeout(() => {
-                //     document.getElementById("menu-nav").style.animation = "hideMenu 2s forwards";
-                //   }, 50);
+             
                   
               }
            }
 
-           var si = document.getElementsByClassName("service-image");
+           var si = document.getElementsByClassName("service-image"), tu = document.getElementsByClassName('testimony-user');
            for(let i = 0; i < si.length; i++){
                si[i].style.backgroundImage = `url(${si[i].getAttribute("image-data")})`;
            }
+            for (let i = 0; i < tu.length; i++) {
+
+                tu[i].style.backgroundImage = `url('${tu[i].getAttribute('data')}')`;
+            }
     </script>
 </body>
 </html>
