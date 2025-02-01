@@ -24,7 +24,39 @@ body {
     text-align: center;
     font-size: 25px;
 }
+ .innerpage-subheading {
+     font-size: 40px;
+     text-align: center;
+ }
+ .full-width{
+    width: auto;
+    height: auto;
+    background: #f7f7f7;
+ }
+ .intro{
+    display: flex;
+    justify-content: space-between;
+ }
+  .intro div{
+      width: 49%;
+  }
+        .intro div:first-child {
+            background-image: url('../../assets/images/inner-section/andriod.webp');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .intro div.pc{
+            background-image: url('../../assets/images/inner-section/desktop.webp');
+        }
+       .intro div:nth-child(2) 
+       {
+       padding:25px;
 
+        }
+        .intro div:nth-child(2) h3,.intro div:nth-child(2) h4{
+            color:#007BFF;
+        }
 #whatsapp-cta {
     position: fixed;
     right: 30px;
@@ -210,6 +242,8 @@ body {
 }
 .section-heading img{
   max-width: 100%;
+  max-height: 500px;
+  border-radius: 10px;
 }
 .section-heading h2 {
     font-size: 45px;
@@ -541,10 +575,10 @@ body {
 
     .three-lister-child {
         width: auto;
-        padding: 2%;
+        padding: 5%;
         margin-bottom: 25px;
     }
-
+  
     #contact-us {
         flex-direction: column;
     }
@@ -584,5 +618,14 @@ body {
         top: -53%;
 
     }
+ .intro {
+   flex-direction: column;
+ }
 
+ .intro div {
+     width: auto;
+ }
+  .intro div:first-child {
+      height: 300px;
+  }
 }

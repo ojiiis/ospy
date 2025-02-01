@@ -16,10 +16,10 @@
                 <ul>
                     <li><a class="active" href="./">Home</a></li>
                     <li><a href="andriod-spy.html">Andriod Spy</a></li>
-                    <li><a href="javascript:void(0)">Iphone Spy</a></li>
-                    <li><a href="javascript:void(0)">Desktop Spy</a></li>
+                    <li><a href="iphone-spy.html">Iphone Spy</a></li>
+                    <li><a href="desktop-spy.html">Desktop Spy</a></li>
                     <li><a href="javascript:void(0)">FAQ</a></li>
-                    <li><a href="javascript:void(0)">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div id="mobile-menu-btn" class="no-desktop"><i class="fa fa-bars"></i></div>
@@ -196,7 +196,7 @@
         <section>
             <div class="section-inner">
                 <div class="section-heading">
-                    <h2>Real Stories from Satisfied Users</h2>
+                    <h2 style="color:#007BFF">Real Stories from Satisfied Users</h2>
                     <p>See how Ospy has helped individuals and businesses stay informed and secure.</p>
                 </div>
                 <div id="testimony-lister">
@@ -281,51 +281,6 @@
             </div>
         </section>
     </div>
-    <a href="https://api.whatsapp.com/send?phone=+2348030914844&text=I+need+Ospy+service.">
-        <div id="whatsapp-cta"></div>
-    </a>
-    <script>
-    
-           var btf = [
-            'Zero Click, Zero Interaction – Complete monitoring without physical access to the target device.',
-            'Real-Time Insights – Track calls, messages, GPS location, and more instantly.',
-            'Stealth Mode – 100% hidden, leaving no trace behind.',
-            'Multi-Device Compatibility – Works seamlessly on Android, iOS, and PCs.',
-            'Track, Protect, and Stay Informed – All Without a Click!'
-           ];
-           var btfI = 0;
-           setInterval(function(){
-               btfI++;
-               if(btfI >= btf.length){
-                   btfI = 0;
-               }
-               document.getElementById("btfd").style.animation = `btf 0.5s forwards`;
-               setTimeout(()=>{
-                  document.getElementById("btfd").style.animation = `none`;
-                   document.getElementById("btfd").textContent = btf[btfI];
-               },100);
-               
-           },5000);
-           document.getElementById("mobile-menu-btn").onclick = function(){
-              if(document.getElementById("menu-nav").style.display == "" || document.getElementById("menu-nav").style.display == "none"){
-                  document.getElementById("menu-nav").style.display = "block";
-        
-                
-              }else{
-                 document.getElementById("menu-nav").style.display = "none";
-             
-                  
-              }
-           }
-
-           var si = document.getElementsByClassName("service-image"), tu = document.getElementsByClassName('testimony-user');
-           for(let i = 0; i < si.length; i++){
-               si[i].style.backgroundImage = `url(${si[i].getAttribute("image-data")})`;
-           }
-            for (let i = 0; i < tu.length; i++) {
-
-                tu[i].style.backgroundImage = `url('${tu[i].getAttribute('data')}')`;
-            }
-    </script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
