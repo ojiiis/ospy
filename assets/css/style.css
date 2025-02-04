@@ -647,3 +647,12 @@ body {
         align-items: center;
 }
 
+#policy{
+    display: flex;
+        justify-content: center;
+}
+#policy a{
+    margin-right: 10px;
+    text-decoration: none;
+    color:#dc143c;
+}
