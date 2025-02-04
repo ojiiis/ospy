@@ -55,4 +55,5 @@
     z-index: 100000;`;
       a.appendChild(b);
       document.body.appendChild(a);
+      document.getElementById("loading").style.display = "none";
      }
